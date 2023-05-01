@@ -7,7 +7,6 @@ import cn from 'classnames';
 import styles from './App.module.scss';
 import burger from './assets/images/icons/burger.svg';
 import company from './assets/images/icons/company.svg';
-import down from './assets/images/icons/down.svg';
 import fly from './assets/images/icons/fly.svg';
 import roundTrip from './assets/images/icons/round-trip.svg';
 import logo from './assets/images/logo.jpg';
@@ -47,43 +46,51 @@ export const App = () => {
           <div className='container'>
             <img className={styles.banner} src={banner} alt='' />
             <div>
-              <h1>Слетайте в ноябре на Урал получите до 5 000 миль</h1>
+              <h1>Fly to the Urals in November and get up to 5,000 miles</h1>
               <p>
                 after the first flight with Utair in addition to the miles due for the flight according to the rules of
                 Status Use miles
                 until December 31 1 mile = 1 ₽
               </p>
-              <button>Полетели</button>
+              <button>Flew</button>
             </div>
           </div>
         </section>
         <section className={styles.profit}>
           <div className='container'>
-            <h2>Кому выгодно?</h2>
-            <ul>
-              <li>
-                <h3>Первый раз летите</h3>
-                <p>
-                  До 5000 миль получают пассажиры, ранее не совершавшие полет с картой Status
-                </p>
-              </li>
-              <li>
-                <h3>Нет учтеных полетов</h3>
-                <p>
-                  Пассажир может быть зарегистрирован в программе до начала акции, но учтенных полетов на карте Status
-                  нет
-                </p>
-              </li>
-              <li>
-                <h3>Владелецу карты</h3>
-                <p>
-                  Пассажиру — владельцу карты Status, совершившему полет — возвращается до 20% милями от суммы
-                  бронирования, потраченной на билет и дополнительные услуги в рамках первого бронирования, оформленного
-                  в
-                  период акции, но не более 5000 ₽
-                </p>
-              </li>
-            </ul>
+            <div className={styles.content}>
+              <div className={styles.left}>
+                <img src={profit} alt='' />
+              </div>
+              <div className={styles.right}>
+                <h2>Who benefits?</h2>
+                <ul>
+                  <li>
+                    <h3>Fly for the first time</h3>
+                    <p>
+                      Up to 5,000 miles are awarded to passengers who have not previously flown with a Status card
+                    </p>
+                  </li>
+                  <li>
+                    <h3>No registered flights</h3>
+                    <p>
+                      A passenger can be registered in the program before the start of the promotion, but the flights
+                      are counted on the map
+                      status no
+                    </p>
+                  </li>
+                  <li>
+                    <h3>Card holder</h3>
+                    <p>
+                      The passenger - the owner of the Status card who made the flight - is refunded up to 20% in miles
+                      of the amount
+                      booking spent on the ticket and additional services within the first booking,
+                      issued during the promotion period, but not more than $5,000
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
         <section className={styles.extraMiles}>
@@ -91,9 +98,9 @@ export const App = () => {
             <ul>
               <li>
                 1
-                <div><h3><a href='#'>Активируйте промокод</a></h3>
-                  После покупки билета активируйте промокод в личном кабинете на стр.
-                  <a href='#' className={styles.myMiles}>«Мои мили»</a>
+                <div><h3><a href='#'>Activate promo code</a></h3>
+                  After purchasing a ticket, activate the promotional code in your account on page
+                  <a href='#' className={styles.myMiles}>«My miles»</a>
                   <a href='#'>
                     <img src={company} alt='' />
                     UTAIRURAL2021
@@ -102,25 +109,25 @@ export const App = () => {
               <li>
                 2
                 <div>
-                  <h3><a href='#'>Проверьте, что полет привязан к карте Status</a></h3>
+                  <h3><a href='#'>Check that the flight is linked to the Status card</a></h3>
                   <p>
-                    На стр. <a href='#'>«Мои полёты»</a> вы увидите купленый билет
+                    On page <a href='#'>«My flights»</a> you will see the purchased ticket
                   </p>
                 </div>
               </li>
               <li>
                 3
                 <div>
-                  <h3><a href='#'>Если нет — привяжите</a></h3>
-                  Добавьте полет (номер бронирования) на стр.
-                  <a href='#' className={styles.myMiles}>«Мои полеты»</a>
+                  <h3><a href='#'>If not, bind</a></h3>
+                  Add flight (booking number) on page
+                  <a href='#' className={styles.myMiles}>«My flights»</a>
                 </div>
               </li>
               <li>
                 4
                 <div>
-                  <h3><a href='#'>Получите мили</a></h3>
-                  До 5 000 миль будет начислено до 10 декабря 2021 года
+                  <h3><a href='#'>Earn Miles</a></h3>
+                  Up to 5,000 miles will be credited by December 10, 2021
                 </div>
               </li>
             </ul>
@@ -128,14 +135,16 @@ export const App = () => {
         </section>
         <section className={styles.directions}>
           <div className={cn('container', styles.container)}>
-            <h2>Куда можно полететь?</h2>
+            <h2>Where can you fly?</h2>
             <ul>
               {vouchers.map((voucher, index) => (
                 <li className={styles.voucher} key={index}>
                   <img src={voucher.photo} alt='' />
                   <div>
-                    <p>от {voucher.withDiscount} ₽ <span>{voucher.price} ₽</span></p>
+                    <p>от {voucher.withDiscount} $ <span>{voucher.price} $</span></p>
                   </div>
+                  Lorem ipsum dolor sit amet, consectetur.
+                  <button>Fly!</button>
                 </li>
               ))}
             </ul>
@@ -149,17 +158,34 @@ export const App = () => {
                       <img src={roundTrip} alt='' />
                       <div>
                         <h3>{voucher.to}</h3>
+                        <img src={fly} alt='' />
                         from {voucher.from}
                       </div>
                     </div>
                     <div className={styles.price}>
-                      <h3>от {voucher.withDiscount} ₽</h3>
-                      <h3>от {voucher.price} ₽</h3>
+                      <h3>от {voucher.withDiscount} $</h3>
+                      <h3>от {voucher.price} $</h3>
                     </div>
                   </a>
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+        <section className={styles.questions}>
+          <div className='container'>
+            <h2>Frequently asked questions</h2>
+            <select name='question1' id='question1'>
+              I did not provide a loyalty card number when purchasing. How to account for a flight as part of a
+              promotion?
+              <option value=''>
+                Restore the flight made under the conditions of the promotion before May 31, 2021. To do this, write to
+                Feedback
+              </option>
+            </select>
+            <select name='question2' id='question2'>
+              I have a promo code from a partner, how do I use it?
+            </select>
           </div>
         </section>
       </main>
