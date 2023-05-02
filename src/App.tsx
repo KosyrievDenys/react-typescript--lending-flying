@@ -11,6 +11,7 @@ import fly from './assets/images/icons/fly.svg';
 import roundTrip from './assets/images/icons/round-trip.svg';
 import down from './assets/images/icons/down.svg';
 import logo from './assets/images/logo.png';
+import banner375 from './assets/images/banner375.png';
 import banner from './assets/images/banner.png';
 import profit from './assets/images/profit.jpg';
 import berlin from './assets/images/Berlin.jpg';
@@ -46,15 +47,23 @@ export const App = () => {
       </header>
       <main>
         <section className={styles.mainPage}>
-          <img className={cn(styles.banner, 'cover')} src={banner} alt='' />
+          <img className={cn(styles.banner375, 'cover')} src={banner375} alt='' />
           <div className='container'>
-            <h1>Fly to the Urals in November and get up to 5,000 miles</h1>
-            <p>
-              after the first flight with Utair in addition to the miles due for the flight according to the rules of
-              Status Use miles
-              until December 31 1 mile = 1 ₽
-            </p>
-            <a href='#' className={cn('btn', styles.btn)}>Flew!</a>
+            <img className={cn(styles.banner, 'cover')} src={banner} alt='' />
+            <div className={styles.content}>
+              < h1> Fly to the Urals in November and get up to 5,000 miles</h1>
+              <p>
+                after the first flight with Utair in addition to the miles due for the flight according to the rules of
+                Status Use miles
+                until December 31 1 mile = 1 ₽
+                after the first flight with Utair in addition to the miles due for the flight according to the rules of
+                Status Use miles
+                until December 31 1 mile = 1 ₽
+                after the first flight with Utair in addition to the miles due for the flight according to the rules of
+                Status Use miles
+              </p>
+              <a href='#' className={cn('btn', styles.btn)}>Flew!</a>
+            </div>
           </div>
         </section>
         <section className={styles.profit}>
@@ -99,7 +108,7 @@ export const App = () => {
             <h2>Extra miles after ticket purchase</h2>
             <ul>
               <li>
-                <p>1</p>
+                <p className={styles.num}>1</p>
                 <div>
                   <h3><a href='#'>Activate promo code</a></h3>
                   <p>
@@ -113,7 +122,7 @@ export const App = () => {
                 </div>
               </li>
               <li>
-                <p>2</p>
+                <p className={styles.num}>2</p>
                 <div>
                   <h3><a href='#'>Check that the flight is linked to the Status card</a></h3>
                   <p>
@@ -122,7 +131,7 @@ export const App = () => {
                 </div>
               </li>
               <li>
-                <p>3</p>
+                <p className={styles.num}>3</p>
                 <div>
                   <h3><a href='#'>If not, bind</a></h3>
                   <p>
@@ -132,7 +141,7 @@ export const App = () => {
                 </div>
               </li>
               <li>
-                <p>4</p>
+                <p className={styles.num}>4</p>
                 <div>
                   <h3><a href='#'>Earn Miles</a></h3>
                   <p>
@@ -156,8 +165,8 @@ export const App = () => {
                     </div>
                     See beautiful {voucher.to} from {voucher.from}
                     <span className={styles.roundtrip}>
-                    {voucher.roundtrip ? 'roundtrip' : `from ${voucher.from}`}
-                  </span>
+            {voucher.roundtrip ? 'roundtrip' : `from ${voucher.from}`}
+              </span>
                     <a href='#' className='btn'>Fly</a>
                   </div>
                 </div>
@@ -198,9 +207,9 @@ export const App = () => {
               <div className={styles.question}>
                 I did not provide a loyalty card number when purchasing. How to account for a flight as part of a
                 promotion?
-                <img src={down} alt='' />
+                <img src={down} alt='' className={cn(select1 && styles.open)} />
               </div>
-              {select1 && <div>
+              {select1 && <div className={styles.answer}>
                 Restore the flight made under the conditions of the promotion before May 31, 2021. To do this, write to
                 Feedback
               </div>}
@@ -208,9 +217,9 @@ export const App = () => {
             <div className={styles.select} onClick={() => setSelect2(!select2)}>
               <div className={styles.question}>
                 I have a promo code from a partner, how do I use it?
-                <img src={down} alt='' />
+                <img src={down} alt='' className={cn(select2 && styles.open)} />
               </div>
-              {select2 && <div>
+              {select2 && <div className={styles.answer}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus, sint?
               </div>}
             </div>
