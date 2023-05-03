@@ -87,3 +87,12 @@ a {
     max-width: 576px;
   }
 }
+
+@media(min-width: 768px) {
+  .container {
+    max-width: 915px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}

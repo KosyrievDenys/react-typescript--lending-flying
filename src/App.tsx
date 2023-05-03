@@ -23,6 +23,20 @@ const vouchers = [
   { photo: berlin, withDiscount: '10 000', price: '20 000', from: 'Berlin', to: 'Kyiv', roundtrip: true },
   { photo: paris, withDiscount: '20 000', price: '30 000', from: 'Paris', to: 'Lviv', roundtrip: false },
   { photo: prague, withDiscount: '30 000', price: '15 000', from: 'Prague', to: 'Rome', roundtrip: true },
+  { photo: rome, withDiscount: '540 000', price: '540 000', from: 'Rome RomeRomeRomeyy Rome Rome Rome Rome', to: 'New York Rome yyRomeRomeRome Rome', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
+  { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
   { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
 ];
 
@@ -42,6 +56,7 @@ export const App = () => {
               <p className={styles.language}>EN</p>
               <img src={burger} alt='' />
             </div>
+            <h1>Utair</h1>
           </div>
         </div>
       </header>
@@ -56,11 +71,6 @@ export const App = () => {
                 after the first flight with Utair in addition to the miles due for the flight according to the rules of
                 Status Use miles
                 until December 31 1 mile = 1 ₽
-                after the first flight with Utair in addition to the miles due for the flight according to the rules of
-                Status Use miles
-                until December 31 1 mile = 1 ₽
-                after the first flight with Utair in addition to the miles due for the flight according to the rules of
-                Status Use miles
               </p>
               <a href='#' className={cn('btn', styles.btn)}>Flew!</a>
             </div>
@@ -69,9 +79,7 @@ export const App = () => {
         <section className={styles.profit}>
           <div className='container'>
             <div className={styles.content}>
-              <div className={styles.left}>
-                <img src={profit} alt='' />
-              </div>
+              <img src={profit} alt='' className={styles.left}/>
               <div className={styles.right}>
                 <h2>Who benefits?</h2>
                 <ul>
@@ -160,7 +168,7 @@ export const App = () => {
                 <div className={styles.voucher} key={index}>
                   <img src={voucher.photo} alt='' className='cover' />
                   <div className={styles.content}>
-                    <div>
+                    <div className={styles.price}>
                       <p>from {voucher.withDiscount} $ <span>{voucher.price} $</span></p>
                     </div>
                     See beautiful {voucher.to} from {voucher.from}
