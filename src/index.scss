@@ -82,6 +82,25 @@ a {
   padding: 9px;
 }
 
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  width: 361px;
+  &:first-child {
+    margin-left: 0;
+  }
+  img {
+    margin-bottom: 13px;
+  }
+  .content {
+    div {
+      padding-bottom: 6px;
+    }
+  }
+}
+
 @media(min-width: 567px) {
   .container {
     max-width: 576px;

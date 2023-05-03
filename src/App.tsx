@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 //libs
 import cn from 'classnames';
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 
 //assets
 import styles from './App.module.scss';
@@ -28,7 +30,7 @@ const vouchers = [
     withDiscount: '540 000',
     price: '540 000',
     from: 'Rome RomeRomeRomeyy Rome Rome Rome Rome',
-    to: 'New York Rome yyRomeRomeRome Rome',
+    to: 'New York Rome yyRomeRomeRome Rome Rome Rome Rome Rome',
     roundtrip: false
   },
   { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
@@ -171,21 +173,34 @@ export const App = () => {
           <div className={cn('container', styles.container)}>
             <h2>Where can you fly?</h2>
             <div className={styles.wrapper}>
-              {vouchers.map((voucher, index) => (
-                <div className={styles.voucher} key={index}>
-                  <img src={voucher.photo} alt='' className='cover' />
-                  <div className={styles.content}>
-                    <div className={styles.price}>
-                      <p>from {voucher.withDiscount} $ <span>{voucher.price} $</span></p>
-                    </div>
-                    See beautiful {voucher.to} from {voucher.from}
-                    <span className={styles.roundtrip}>
+              <Swiper
+                slidesPerView={'auto'}
+                grabCursor={true}
+                spaceBetween={15}
+                breakpoints={{
+                  567: {
+                    spaceBetween: 26,
+                  },
+                }}
+              >
+                {vouchers.map((voucher, index) => (
+                  <SwiperSlide key={index} className={styles.voucher}>
+                    {/*<div className={styles.voucher} key={index}>*/}
+                    <img src={voucher.photo} alt='' className='cover' />
+                    <div className={styles.content}>
+                      <div className={styles.price}>
+                        <p>from {voucher.withDiscount} $ <span>{voucher.price} $</span></p>
+                      </div>
+                      See beautiful {voucher.to} from {voucher.from}
+                      <span className={styles.roundtrip}>
             {voucher.roundtrip ? 'roundtrip' : `from ${voucher.from}`}
               </span>
-                    <a href='#' className='btn'>Fly</a>
-                  </div>
-                </div>
-              ))}
+                      <a href='#' className='btn'>Fly</a>
+                    </div>
+                    {/*</div>*/}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </section>
@@ -201,7 +216,7 @@ export const App = () => {
                         <div>
                           <h3>{voucher.to}</h3>
                           <img src={fly} alt='' />
-                          from {voucher.from}
+                          <p>from {voucher.from}</p>
                         </div>
                       </div>
                       <div className={styles.price}>
