@@ -23,7 +23,14 @@ const vouchers = [
   { photo: berlin, withDiscount: '10 000', price: '20 000', from: 'Berlin', to: 'Kyiv', roundtrip: true },
   { photo: paris, withDiscount: '20 000', price: '30 000', from: 'Paris', to: 'Lviv', roundtrip: false },
   { photo: prague, withDiscount: '30 000', price: '15 000', from: 'Prague', to: 'Rome', roundtrip: true },
-  { photo: rome, withDiscount: '540 000', price: '540 000', from: 'Rome RomeRomeRomeyy Rome Rome Rome Rome', to: 'New York Rome yyRomeRomeRome Rome', roundtrip: false },
+  {
+    photo: rome,
+    withDiscount: '540 000',
+    price: '540 000',
+    from: 'Rome RomeRomeRomeyy Rome Rome Rome Rome',
+    to: 'New York Rome yyRomeRomeRome Rome',
+    roundtrip: false
+  },
   { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
   { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
   { photo: rome, withDiscount: '40 000', price: '540 000', from: 'Rome', to: 'New York', roundtrip: false },
@@ -49,7 +56,7 @@ export const App = () => {
   return (
     <div className={styles.app}>
       <header className={styles.header}>
-        <div className='container'>
+        <div className={cn('container', styles.container)}>
           <div className={styles.content}>
             <img src={logo} alt='' className={cn(styles.logo, 'cover')} />
             <div className={styles.right}>
@@ -79,7 +86,7 @@ export const App = () => {
         <section className={styles.profit}>
           <div className='container'>
             <div className={styles.content}>
-              <img src={profit} alt='' className={styles.left}/>
+              <img src={profit} alt='' className={cn(styles.left, 'cover')} />
               <div className={styles.right}>
                 <h2>Who benefits?</h2>
                 <ul>

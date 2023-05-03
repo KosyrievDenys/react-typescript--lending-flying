@@ -162,7 +162,7 @@
         div {
           p {
             font-weight: 400;
-            font-size:   23px;
+            font-size:   24px;
             color:       #154BAD;
           }
           span {
@@ -471,19 +471,19 @@
       }
     }
     .profit {
-      padding: 30px 0 31px;
+      padding: 53px 0 31px;
       .content {
         display: flex;
-        padding: 23px 0 0;
         gap:     30px;
       }
       .left {
         max-height: 274px;
-        display:    block;
         width:      48%;
+        display:    block;
         margin-top: 22px;
       }
       .right {
+        //width:      48%;
         h2 {
           padding-bottom: 21px;
         }
@@ -566,8 +566,130 @@
         }
       }
     }
-    .directions2{
-      padding: 10px 0 30px;
+    .directions2 {
+      padding: 48px 0 60px;
+    }
+    .questions {
+      h2 {
+        margin-bottom: 47px;
+      }
+      .select:not(.select:last-child) {
+        margin-bottom: 70px;
+        .answer {
+          padding-bottom: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .app {
+    .header {
+      .container {
+        max-width: 1182px;
+      }
+      .logo {
+        width:       44px;
+        margin-left: 22px;
+      }
+      .content {
+        min-height: 74px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+    }
+    .mainPage {
+      padding-top:    67px;
+      padding-bottom: 64px;
+      .banner {
+        right: -332px;
+        scale: 1;
+      }
+      h1 {
+        font-size: 46px;
+      }
+      p {
+        padding-bottom: 56px;
+      }
+      .btn {
+        min-width: 190px;
+      }
+    }
+    .profit {
+      padding: 120px 0 67px;
+      .left {
+        width:      50%;
+        max-height: 335px;
+        margin-top: 13px;
+
+      }
+      .right {
+        h2 {
+          padding-bottom: 40px;
+        }
+        h3 {
+          padding-bottom: 17px;
+        }
+      }
+    }
+    .extraMiles {
+      padding-bottom: 43px;
+      h2 {
+        padding-bottom: 35px;
+      }
+      li {
+        .num {
+          font-size: 48px;
+        }
+        div {
+          h3 {
+            font-size:      24px;
+            padding-bottom: 36px;
+          }
+          p {
+            padding-bottom: 14px;
+          }
+        }
+      }
+    }
+    .directions {
+      padding: 50px 0 0;
+      .container {
+        max-width: 1115px;
+        margin:    0 auto;
+      }
+      .voucher {
+        min-width: 361px;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          margin-bottom: 13px;
+        }
+        .content {
+          div {
+            padding-bottom: 6px;
+          }
+        }
+      }
+    }
+    .directions2 {
+      padding: 33px 0 17px;
+    }
+    .questions {
+      h2 {
+        border: 0;
+      }
+      .select {
+        .question {
+          font-size: 24px;
+        }
+        .answer {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

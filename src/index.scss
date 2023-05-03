@@ -96,3 +96,15 @@ a {
     font-size: 32px;
   }
 }
+
+@media(min-width: 1024px) {
+  .container {
+    max-width: 1132px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
