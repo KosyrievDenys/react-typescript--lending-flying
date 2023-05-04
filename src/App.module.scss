@@ -56,6 +56,10 @@
       min-width:        210px;
       background-color: #fff;
       margin-bottom:    29px;
+      &:hover {
+        background: #CC443E;
+        color:      #fff;
+      }
     }
   }
   .profit {
@@ -112,6 +116,9 @@
         a {
           color:           #154BAD;
           justify-content: left;
+          &:hover {
+            color: #CC443E;
+          }
           img {
             width: 20px;
           }
@@ -177,6 +184,10 @@
           bottom:          19px;
           left:            16px;
           z-index:         1;
+          &:hover {
+            background: #CC443E;
+            color:      #fff;
+          }
         }
       }
     }
@@ -189,16 +200,19 @@
       overflow:   auto;
     }
     li {
-      padding:          16px 10px 15px;
       margin-bottom:    8px;
       background-color: #fff;
     }
     a {
+      padding:         16px 10px 15px;
       display:         flex;
       justify-content: space-between;
       align-items:     center;
       flex-wrap:       wrap;
       gap:             10px;
+      &:hover {
+        background-color: #F6FFFF;
+      }
     }
     .town {
       display: flex;
@@ -257,6 +271,7 @@
       padding:       0 0 21px;
       margin-bottom: 20px;
       border-bottom: 1px solid rgba(17, 24, 32, 0.3);
+      cursor:        pointer;
       .question {
         display:         flex;
         justify-content: space-between;
@@ -530,7 +545,9 @@
         max-height: 500px;
       }
       li {
-        padding: 29px 16px 23px;
+        a {
+          padding: 29px 16px 23px;
+        }
       }
       .town {
         div {
