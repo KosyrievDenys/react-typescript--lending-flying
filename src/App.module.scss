@@ -328,13 +328,14 @@
         display: none;
       }
       .banner {
-        height:   100%;
-        display:  block;
-        position: absolute;
-        top:      0;
-        right:    -158px;
-        z-index:  0;
-        scale:    1.3;
+        height:     100%;
+        display:    block;
+        position:   absolute;
+        top:        0;
+        right:      -158px;
+        z-index:    0;
+        scale:      1.3;
+        object-fit: contain;
       }
       .content {
         max-width: 378px;
