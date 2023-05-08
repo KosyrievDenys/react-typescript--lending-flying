@@ -60,7 +60,9 @@ export const App = () => {
       <header className={styles.header}>
         <div className={cn('container', styles.container)}>
           <div className={styles.content}>
-            <img src={logo} alt='' className={cn(styles.logo, 'cover')} />
+            <a href='#'>
+              <img src={logo} alt='' className={cn(styles.logo, 'cover')} />
+            </a>
             <div className={styles.right}>
               <p className={styles.language}>EN</p>
               <img src={burger} alt='' />

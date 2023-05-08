@@ -1,6 +1,11 @@
 .app {
   .header {
     background-color: #003594;
+    position:         fixed;
+    top:              0;
+    left:             0;
+    z-index:          1000;
+    width:            100vw;
     .content {
       min-height:      62px;
       display:         flex;
@@ -32,6 +37,7 @@
   }
   .mainPage {
     background-color: #003594;
+    margin-top:       62px;
     .banner375 {
       width:         100vw;
       max-height:    170px;
@@ -304,8 +310,9 @@
   .app {
     .header {
       .content {
-        min-height:  64px;
-        align-items: flex-end;
+        min-height:     73px;
+        padding-bottom: 9px;
+        align-items:    flex-end;
       }
       .logo {
         width: 37px;
@@ -315,8 +322,8 @@
       }
     }
     .mainPage {
-      overflow:    hidden;
-      padding-top: 9px;
+      overflow:   hidden;
+      margin-top: 71px;
       .banner375 {
         display: none;
       }
@@ -449,7 +456,7 @@
   .app {
     .header {
       .content {
-        min-height: 69px;
+        min-height: 77px;
       }
       .logo {
         margin-left: 11px;
@@ -603,10 +610,10 @@
       }
       .logo {
         width:       44px;
-        margin-left: 22px;
+        margin-left: 13px;
       }
       .content {
-        min-height: 74px;
+        min-height: 80px;
       }
       h1 {
         font-size: 50px;
